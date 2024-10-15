@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore various Skills Bootcamps in digital areas.">
+    <title>Digital Skills Bootcamps</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Digital Skills Bootcamps</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="software-development.html">Software Development</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="data-analytics.html">Data & Analytics</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="cyber-security.html">Cybersecurity</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="cloud-computing.html">Cloud Computing</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="web-development.html">Web Development</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mt-4 text-center">
+        <div id="progress" class="text-center mb-3"></div> <!-- Progress Display -->
+
+        <h2 class="mb-4">ARE YOU UNCERTAIN ABOUT WHICH PATH TO PURSUE IN THE REALM OF TECH SKILLS?</h2>
+        <p class="text-secondary mb-4">TRY OUR SELF-QUIZ TO FIND OUT WHICH DIGITAL SKILL BOOTCAMP IS RIGHT FOR YOU!</p>
+        <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+    
+        <!-- Quiz questions section, initially hidden -->
+        <div id="quizSection" style="display: none; margin-top: 20px;">
+            <div class="question" data-question="1" style="display: block;">
+                <h4>Do you enjoy the visual design and aesthetics of websites?</h4>
+                <label><input type="radio" name="question1" value="web"> Yes, I love it!</label><br>
+                <label><input type="radio" name="question1" value="software"> Not really, I prefer the technical side.</label>
+            </div>
+            <div class="question" data-question="2" style="display: none;">
+                <h4>Do you enjoy solving complex coding problems?</h4>
+                <label><input type="radio" name="question2" value="software"> Yes, I find it thrilling!</label><br>
+                <label><input type="radio" name="question2" value="data"> I’m more into analyzing data.</label>
+            </div>
+            <div class="question" data-question="3" style="display: none;">
+                <h4>Are you fascinated by the security of computer systems and data?</h4>
+                <label><input type="radio" name="question3" value="cybersecurity"> Absolutely, I find it crucial.</label><br>
+                <label><input type="radio" name="question3" value="cloud"> I’m more interested in cloud technology.</label>
+            </div>
+            <div class="question" data-question="4" style="display: none;">
+                <h4>Do you enjoy working with data to uncover insights?</h4>
+                <label><input type="radio" name="question4" value="data"> Yes, it's fascinating!</label><br>
+                <label><input type="radio" name="question4" value="web"> Not really, I prefer other areas.</label>
+            </div>
+            <div class="question" data-question="5" style="display: none;">
+                <h4>Are you interested in learning about cloud services?</h4>
+                <label><input type="radio" name="question5" value="cloud"> Yes, I find it exciting!</label><br>
+                <label><input type="radio" name="question5" value="cybersecurity"> Not really, I prefer other tech fields.</label>
+            </div>
+            <button class="btn btn-secondary mt-3" onclick="nextQuestion()">Next</button>
+            <button class="btn btn-secondary mt-3" onclick="resetQuiz()">Restart Quiz</button> <!-- Added reset button -->
+            <div id="result" class="mt-4" style="display: none;"></div>
+        </div>
+    </main>
+    
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Digital Skills Blog | Created by [Your Name]</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

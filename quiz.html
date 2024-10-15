@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Best Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Which Course Is Right for You?</h1>
+    </header>
+    
+    <main class="container mt-4">
+        <form id="quizForm">
+            <div class="question" data-question="1">
+                <h3>Do you enjoy designing how websites look and feel?</h3>
+                <label><input type="radio" name="question1" value="web"> Yes, I love making websites look appealing.</label><br>
+                <label><input type="radio" name="question1" value="software"> I prefer focusing on how the backend works.</label><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <div class="question" data-question="2" style="display: none;">
+                <h3>Do you like solving security-related problems?</h3>
+                <label><input type="radio" name="question2" value="cybersecurity"> Yes, I enjoy ensuring data and systems are secure.</label><br>
+                <label><input type="radio" name="question2" value="software"> I don't mind, but I enjoy writing code more.</label><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <div class="question" data-question="3" style="display: none;">
+                <h3>Are you interested in how data is processed and analyzed to make decisions?</h3>
+                <label><input type="radio" name="question3" value="data"> Yes, I enjoy working with data.</label><br>
+                <label><input type="radio" name="question3" value="web"> I prefer working on other aspects of development.</label><br>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            <div class="question" data-question="4" style="display: none;">
+                <h3>Do you like building scalable and cloud-based systems?</h3>
+                <label><input type="radio" name="question4" value="cloud"> Yes, I like working with cloud technologies.</label><br>
+                <label><input type="radio" name="question4" value="software"> I'm more interested in local development.</label><br>
+                <button type="button" onclick="showResults()">See Recommended Courses</button>
+            </div>
+        </form>
+        <div id="result" class="mt-3"></div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
